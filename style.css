@@ -25,6 +25,7 @@ html
     flex-wrap: wrap;   
 }
 
+
 .searchBox{
     border-style: solid;
     font-size: x-large;
@@ -34,7 +35,17 @@ html
     flex: auto;
     display: inline-block;
     margin: auto;
+    
 }
+.input-group{
+     display: block;
+
+}
+.searched{
+    border-style: solid;
+    margin: auto;
+    position: relative;   
+}   
 
 .forcastBox{
     border-style: solid;
