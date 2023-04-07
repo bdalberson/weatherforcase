@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather Forcast</title>
+  </head>
+  <body>
+    <header class="head">  
+        <div>
+        <h1 id ="headname">Weather Forcast</h1>
+        </div>
+    </header>
+    
+    <main id="main" class = "main">
+        <div>
+            <form id="form">Search Form</form>   <!-- search form  -->
+        </div>
+        <div>
+          <button id="searchbar">Search Button</button>   <!-- search button  -->
+        </div>
+        <section class = "searchBox"> <!-- used to dynamically serve up citiees -->
+        <div>Cities</div>
+          <ul id="citiesBox"></ul>
+        </section>
+        <section class = "answers"><!-- used to dynamically serve up forcasts -->
+        <div>Forcasts</div>  
+          <ul id="forcastBox"></ul>
+       </section>
+
+    </main>
+
+  </body>
+  <footer>💗 Peace and Love by Bdalberson💗 </footer>
+<script src="./scripts.js"defer></script>
+</html>
