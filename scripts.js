@@ -16,10 +16,11 @@ searchButton.addEventListener("click", function(event) {
     const newButton = document.createElement("button");
     newButton.textContent = queriedCity;
     newButton.addEventListener("click", searchFunction);
+        savedButton.appendChild(newButton);
+
+
     searchFunction();
   });
-
-
   
   savedButton.addEventListener("click", searchFunction);
 function searchFunction() {
