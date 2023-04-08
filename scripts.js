@@ -104,6 +104,54 @@ searchButton.addEventListener("click", function(event) {
       cityBoxSelector.appendChild(cityHum);
 
 
+//////////////////////////
+      let forcastBox1Selector = document.getElementById('forcastBox1');
+      let castOneTime = document.createElement('li');
+      castOneTime.textContent = (dayjs.unix(forcastOneTime).format('MMM D, YYYY'));
+      forcastBox1Selector.appendChild(castOneTime);
+
+
+      let forcastBox2Selector = document.getElementById('forcastBox2');
+      let castTwoTime = document.createElement('li');
+      castTwoTime.textContent = (dayjs.unix(forcastTwoTime).format('MMM D, YYYY'));
+      forcastBox2Selector.appendChild(castTwoTime);
+
+      let forcastBox3Selector = document.getElementById('forcastBox3');
+      let castThreeTime = document.createElement('li');
+      castThreeTime.textContent = (dayjs.unix(forcastThreeTime).format('MMM D, YYYY'));
+      forcastBox3Selector.appendChild(castThreeTime);
+
+      let forcastBox4Selector = document.getElementById('forcastBox4');
+      let castFourTime = document.createElement('li');
+      castFourTime.textContent = (dayjs.unix(forcastFourTime).format('MMM D, YYYY'));
+      forcastBox4Selector.appendChild(castFourTime);
+
+      let forcastBox5Selector = document.getElementById('forcastBox5');
+      let castFiveTime = document.createElement('li');
+      castFiveTime.textContent = (dayjs.unix(forcastFiveTime).format('MMM D, YYYY'));
+      forcastBox5Selector.appendChild(castFiveTime);
+
+      
+    //   let castOneWeather = document.createElement('li');
+    //   castOneWeather.textContent = (forcastOneWeather);
+    //   forcastBoxSelector.appendChild(castOneWeather);
+
+
+    //   // Create a new p element to display the queried temperature
+    //   let cityTemp = document.createElement('li');
+    //   cityTemp.textContent = ("Temp: " + queriedTemp + "°F");
+    //   cityBoxSelector.appendChild(cityTemp);
+
+
+    //   let cityWind = document.createElement('li');
+    //   cityWind.textContent = ("Wind: " + queriedWind + " MPH");
+    //   cityBoxSelector.appendChild(cityWind);
+
+    //   let cityHum = document.createElement('li');
+    //   cityHum.textContent = ("Humidity: " + queriedHum + "%");
+    //   cityBoxSelector.appendChild(cityHum);
+
+
     })
     .catch(function (error) {
       console.error(error);
