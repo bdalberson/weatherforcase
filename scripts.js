@@ -41,6 +41,33 @@ searchButton.addEventListener("click", function(event) {
       let forcastOneTime = data.list[8].dt;
       let forcastOneWeather = data.list[8].weather[0].main
 
+      let forcastTwoTemp = data.list[16].main.temp;
+      let forcastTwoWind = data.list[16].wind.speed;
+      let forcastTwoHum = data.list[16].main.humidity;
+      let forcastTwoTime = data.list[16].dt;
+      let forcastTwoWeather = data.list[16].weather[0].main
+
+
+      let forcastThreeTemp = data.list[24].main.temp;
+      let forcastThreeWind = data.list[24].wind.speed;
+      let forcastThreeHum = data.list[24].main.humidity;
+      let forcastThreeTime = data.list[24].dt;
+      let forcastThreeWeather = data.list[24].weather[0].main
+
+      let forcastFourTemp = data.list[31].main.temp;
+      let forcastFourWind = data.list[31].wind.speed;
+      let forcastFourHum = data.list[31].main.humidity;
+      let forcastFourTime = data.list[31].dt;
+      let forcastFourWeather = data.list[31].weather[0].main
+
+      let forcastFiveTemp = data.list[39].main.temp;
+      let forcastFiveWind = data.list[39].wind.speed;
+      let forcastFiveHum = data.list[39].main.humidity;
+      let forcastFiveTime = data.list[39].dt;
+      let forcastFiveWeather = data.list[39].weather[0].main
+
+      
+
 
       console.log(data);
       let cityBoxSelector = document.getElementById('citiesBox');
