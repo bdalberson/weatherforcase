@@ -47,6 +47,11 @@ html
     position: relative;   
 }   
 
+.savebutton{
+    display: flex;
+    flex-direction: column;
+}
+
 .forcastBox{
     border-style: solid;
     font-size: x-large;
