@@ -21,7 +21,7 @@ searchButton.addEventListener("click", function(event) {
       let queriedLat = data[0].lat;
       let queriedLon = data[0].lon;
       // Second API call to get weather forecast using latitude and longitude
-      return fetch("http://api.openweathermap.org/data/2.5/forecast?lat=" + queriedLat + "&lon=" + queriedLon + "&appid=947f373954b974834bc6986dec7c1dd0");
+      return fetch("http://api.openweathermap.org/data/2.5/forecast?lat=" + queriedLat + "&lon=" + queriedLon + "&units=imperial&appid=947f373954b974834bc6986dec7c1dd0");
     })
     .then(function (response) {
       return response.json();
