@@ -137,7 +137,21 @@ searchButton.addEventListener("click", function(event) {
       castTwoTime.textContent = (dayjs.unix(forcastTwoTime).format('MMM D, YYYY'));
       forcastBox2Selector.appendChild(castTwoTime);
 
+      let castTwoWeather = document.createElement('li');
+      castTwoWeather.textContent = (forcastTwoWeather);
+      forcastBox2Selector.appendChild(castTwoWeather);
 
+      let castTwoTemp = document.createElement('li');
+      castTwoTemp.textContent = ("Temp: " + forcastTwoTemp + "°F");
+      forcastBox2Selector.appendChild(castTwoTemp);
+
+      let castTwoWind = document.createElement('li');
+    castTwoWind.textContent = ("Wind: " + forcastTwoWind + " MPH");
+    forcastBox2Selector.appendChild(castTwoWind);
+
+    let castTwoHum = document.createElement('li');
+    castTwoHum.textContent = ("Humidity: " + forcastTwoHum + "%");
+    forcastBox2Selector.appendChild(castTwoHum);
 
 
 
