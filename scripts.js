@@ -233,7 +233,23 @@ searchButton.addEventListener("click", function(event) {
     });
 });
 
+// function getWeatherImage(text) {
+//     switch (text) {
+//       case 'Clear':
+//         return 'Assets/clear.png';
+//       case 'Rain':
+//         return 'Assets/rain.png';
+//       case 'Clouds':
+//         return 'Assets/cloud.png';
+//       case 'Snow':
+//         return 'Assets/snow.png';
+//     }
+//   }
 
-time = dayjs.unix(1681311600).format('MMM D, YYYY')
+//   const icon = "Clear"
+  
 
-console.log(time)
+//   let forcastBox1Selector = document.getElementById('forcastBox1');
+//   let showIcon = document.createElement('img');
+//   showIcon.innerText = icon.src = getWeatherImage(icon)
+//   forcastBox1Selector.appendChild(showIcon)
