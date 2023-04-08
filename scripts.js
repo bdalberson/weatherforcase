@@ -155,21 +155,27 @@ searchButton.addEventListener("click", function(event) {
 
 
 
-
-
-
-
-
       let forcastBox3Selector = document.getElementById('forcastBox3');
       let castThreeTime = document.createElement('li');
       castThreeTime.textContent = (dayjs.unix(forcastThreeTime).format('MMM D, YYYY'));
       forcastBox3Selector.appendChild(castThreeTime);
 
 
+      let castThreeWeather = document.createElement('li');
+      castThreeWeather.textContent = (forcastThreeWeather);
+      forcastBox3Selector.appendChild(castThreeWeather);
 
+      let castThreeTemp = document.createElement('li');
+      castThreeTemp.textContent = ("Temp: " + forcastThreeTemp + "°F");
+      forcastBox3Selector.appendChild(castThreeTemp);
 
+      let castThreeWind = document.createElement('li');
+    castThreeWind.textContent = ("Wind: " + forcastThreeWind + " MPH");
+    forcastBox3Selector.appendChild(castThreeWind);
 
-
+    let castThreeHum = document.createElement('li');
+    castThreeHum.textContent = ("Humidity: " + forcastThreeHum + "%");
+    forcastBox3Selector.appendChild(castThreeHum);
 
 
 
@@ -178,10 +184,21 @@ searchButton.addEventListener("click", function(event) {
       castFourTime.textContent = (dayjs.unix(forcastFourTime).format('MMM D, YYYY'));
       forcastBox4Selector.appendChild(castFourTime);
 
+      let castFourWeather = document.createElement('li');
+      castFourWeather.textContent = (forcastFourWeather);
+      forcastBox4Selector.appendChild(castFourWeather);
 
+      let castFourTemp = document.createElement('li');
+      castFourTemp.textContent = ("Temp: " + forcastFourTemp + "°F");
+      forcastBox4Selector.appendChild(castFourTemp);
 
+      let castFourWind = document.createElement('li');
+    castFourWind.textContent = ("Wind: " + forcastFourWind + " MPH");
+    forcastBox4Selector.appendChild(castFourWind);
 
-
+    let castFourHum = document.createElement('li');
+    castFourHum.textContent = ("Humidity: " + forcastFourHum + "%");
+    forcastBox4Selector.appendChild(castFourHum);
 
 
       let forcastBox5Selector = document.getElementById('forcastBox5');
@@ -189,6 +206,23 @@ searchButton.addEventListener("click", function(event) {
       castFiveTime.textContent = (dayjs.unix(forcastFiveTime).format('MMM D, YYYY'));
       forcastBox5Selector.appendChild(castFiveTime);
 
+
+
+      let castFiveWeather = document.createElement('li');
+      castFiveWeather.textContent = (forcastFiveWeather);
+      forcastBox5Selector.appendChild(castFiveWeather);
+
+      let castFiveTemp = document.createElement('li');
+      castFiveTemp.textContent = ("Temp: " + forcastFiveTemp + "°F");
+      forcastBox5Selector.appendChild(castFiveTemp);
+
+      let castFiveWind = document.createElement('li');
+    castFiveWind.textContent = ("Wind: " + forcastFiveWind + " MPH");
+    forcastBox5Selector.appendChild(castFiveWind);
+
+    let castFiveHum = document.createElement('li');
+    castFiveHum.textContent = ("Humidity: " + forcastFiveHum + "%");
+    forcastBox5Selector.appendChild(castFiveHum);
 
  
 
