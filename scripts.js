@@ -2,7 +2,7 @@
 
 let queriedCity = ""
 
-let queriedLat, queriedLon, queriedTemp, queriedWind, queriedHum;// Declare variables to needed query params
+let queriedLat, queriedLon, queriedTemp, queriedWind, queriedHum, queriedTime;// Declare variables to needed query params
 
 // First API call to get latitude and longitude for queried city
 
@@ -30,6 +30,7 @@ searchButton.addEventListener("click", function(event) {
       let queriedTemp = data.list[0].main.temp; 
       let queriedWind = data.list[0].wind.speed;
       let queriedHum = data.list[0].main.humidity;
+      let queriedTime = data.list[0].dt;
       console.log(data);
       let cityBoxSelector = document.getElementById('citiesBox');
       
@@ -38,6 +39,11 @@ searchButton.addEventListener("click", function(event) {
       cityName.textContent = queriedCity;
       cityBoxSelector.appendChild(cityName);
       
+      // Create a new p element to display the queried time
+      let cityTime = document.createElement('li');
+      cityTime.textContent = (dayjs.unix(queriedTime).format('MMM D, YYYY'));
+      cityBoxSelector.appendChild(cityTime);
+
       // Create a new p element to display the queried temperature
       let cityTemp = document.createElement('li');
       cityTemp.textContent = ("Temp: " + queriedTemp + "°F");
@@ -60,7 +66,6 @@ searchButton.addEventListener("click", function(event) {
 });
 
 
+time = dayjs.unix(1681311600).format('MMM D, YYYY')
 
-// Temp: 76.62°F
-// Wind: 8.43 MPH
-// Humidity: 44 %
+console.log(time)
