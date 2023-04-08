@@ -2,7 +2,9 @@
 
 let queriedCity = ""
 
-let queriedLat, queriedLon, queriedTemp, queriedWind, queriedHum, queriedTime;// Declare variables to needed query params
+// Declare variables to needed query params
+let queriedLat, queriedLon, queriedTemp, queriedWind, queriedHum, queriedTime, queriedWeather;
+let forcastOneTemp, forcastOneWind, forcastOneHum, forcastOneTime, forcastOneWeather 
 
 // First API call to get latitude and longitude for queried city
 
@@ -30,7 +32,16 @@ searchButton.addEventListener("click", function(event) {
       let queriedTemp = data.list[0].main.temp; 
       let queriedWind = data.list[0].wind.speed;
       let queriedHum = data.list[0].main.humidity;
-      let queriedTime = data.list[0].dt;
+      let queriedTime = data.list[0].dt; 
+      let queriedWeather = data.list[0].weather[0].main
+      
+      let forcastOneTemp = data.list[8].main.temp;
+      let forcastOneWind = data.list[8].wind.speed;
+      let forcastOneHum = data.list[8].main.humidity;
+      let forcastOneTime = data.list[8].dt;
+      let forcastOneWeather = data.list[8].weather[0].main
+
+
       console.log(data);
       let cityBoxSelector = document.getElementById('citiesBox');
       
@@ -43,6 +54,13 @@ searchButton.addEventListener("click", function(event) {
       let cityTime = document.createElement('li');
       cityTime.textContent = (dayjs.unix(queriedTime).format('MMM D, YYYY'));
       cityBoxSelector.appendChild(cityTime);
+
+        // Create a new p element to display the queried weather
+      let cityWeather = document.createElement('li');
+      cityWeather.textContent = (queriedWeather);
+      cityBoxSelector.appendChild(cityWeather);
+
+
 
       // Create a new p element to display the queried temperature
       let cityTemp = document.createElement('li');
