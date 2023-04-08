@@ -1,6 +1,21 @@
-
-
 let queriedCity = ""
+
+
+// const searchList = JSON.parse(localStorage.getItem("searchList")) || [] 
+
+// searchList.push(queriedCity)
+// localStorage.setItem("searchlist", JSON.stringify(searchList))
+// for (let i in searchList){  
+//   queriedCity = document.getElementById("searchterm").value;
+//   const newButton = document.createElement("button");
+//   newButton.textContent = queriedCity;
+//   newButton.addEventListener("click", searchFunction);
+//   savedButton.appendChild(newButton);
+
+
+//   searchFunction();
+// }
+
 
 // Declare variables to needed query params
 let queriedLat, queriedLon, queriedTemp, queriedWind, queriedHum, queriedTime, queriedWeather;
