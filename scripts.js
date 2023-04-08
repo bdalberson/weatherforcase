@@ -84,6 +84,8 @@ function searchFunction() {
   
         console.log(data);
         let cityBoxSelector = document.getElementById('citiesBox');
+        clearElement = document.getElementById('citiesBox')
+        clearElement.innerHTML = ""
         
         // Create a new h element to display the city name
         let cityName = document.createElement('h');
@@ -118,7 +120,10 @@ function searchFunction() {
   
   
   //////////////////////////
+
         let forcastBox1Selector = document.getElementById('forcastBox1');
+        clearElement = document.getElementById('forcastBox1')
+        clearElement.innerHTML = ""
         let castOneTime = document.createElement('li');
         castOneTime.textContent = (dayjs.unix(forcastOneTime).format('MMM D, YYYY'));
         forcastBox1Selector.appendChild(castOneTime);
@@ -140,6 +145,8 @@ function searchFunction() {
         forcastBox1Selector.appendChild(castOneHum);
   
         let forcastBox2Selector = document.getElementById('forcastBox2');
+        clearElement = document.getElementById('forcastBox2')
+        clearElement.innerHTML = ""
         let castTwoTime = document.createElement('li');
         castTwoTime.textContent = (dayjs.unix(forcastTwoTime).format('MMM D, YYYY'));
         forcastBox2Selector.appendChild(castTwoTime);
@@ -163,6 +170,8 @@ function searchFunction() {
   
   
         let forcastBox3Selector = document.getElementById('forcastBox3');
+        clearElement = document.getElementById('forcastBox3')
+        clearElement.innerHTML = ""
         let castThreeTime = document.createElement('li');
         castThreeTime.textContent = (dayjs.unix(forcastThreeTime).format('MMM D, YYYY'));
         forcastBox3Selector.appendChild(castThreeTime);
@@ -187,6 +196,8 @@ function searchFunction() {
   
   
         let forcastBox4Selector = document.getElementById('forcastBox4');
+        clearElement = document.getElementById('forcastBox4')
+        clearElement.innerHTML = ""
         let castFourTime = document.createElement('li');
         castFourTime.textContent = (dayjs.unix(forcastFourTime).format('MMM D, YYYY'));
         forcastBox4Selector.appendChild(castFourTime);
@@ -209,6 +220,8 @@ function searchFunction() {
   
   
         let forcastBox5Selector = document.getElementById('forcastBox5');
+        clearElement = document.getElementById('forcastBox5')
+        clearElement.innerHTML = ""
         let castFiveTime = document.createElement('li');
         castFiveTime.textContent = (dayjs.unix(forcastFiveTime).format('MMM D, YYYY'));
         forcastBox5Selector.appendChild(castFiveTime);
@@ -234,24 +247,3 @@ function searchFunction() {
   };
 
 
-
-// function getWeatherImage(text) {
-//     switch (text) {
-//       case 'Clear':
-//         return 'Assets/clear.png';
-//       case 'Rain':
-//         return 'Assets/rain.png';
-//       case 'Clouds':
-//         return 'Assets/cloud.png';
-//       case 'Snow':
-//         return 'Assets/snow.png';
-//     }
-//   }
-
-//   const icon = "Clear"
-  
-
-//   let forcastBox1Selector = document.getElementById('forcastBox1');
-//   let showIcon = document.createElement('img');
-//   showIcon.innerText = icon.src = getWeatherImage(icon)
-//   forcastBox1Selector.appendChild(showIcon)
