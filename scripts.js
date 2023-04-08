@@ -13,6 +13,7 @@ const savedButton = document.getElementById("savedbutton");
 
 searchButton.addEventListener("click", function(event) {
     event.preventDefault();
+    let queriedCity = document.getElementById("searchterm").value;
     const newButton = document.createElement("button");
     newButton.textContent = queriedCity;
     newButton.addEventListener("click", searchFunction);
@@ -22,7 +23,6 @@ searchButton.addEventListener("click", function(event) {
     searchFunction();
   });
   
-  savedButton.addEventListener("click", searchFunction);
 function searchFunction() {
     event.preventDefault();
     
