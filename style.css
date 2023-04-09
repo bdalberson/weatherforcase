@@ -13,6 +13,8 @@ html
     right: 50%;
     left: 50%;
     text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;   
 }
 
 
@@ -37,21 +39,32 @@ html
     flex: auto;
     display: inline-block;
     margin: auto;
-    
+    flex-direction: column;
+    flex-wrap: wrap;   
 }
+    
 .input-group{
      display: block;
-
+     display: flex;
+     flex-direction: column;
+    flex-wrap: wrap;   
 }
+
 .searched{
     border-style: solid;
     margin: auto;
     position: relative;   
+    display: flex;
+    flex-direction: column;
+   flex-wrap: wrap;   
 }   
 
 .savebutton{
     display: flex;
     flex-direction: column;
+    display: flex;
+    flex-direction: column;
+   flex-wrap: wrap;   
 }
 
 .forcastBox{
@@ -62,6 +75,9 @@ html
     height: 40%;
     flex: auto;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+   flex-wrap: wrap;   
 }
 .forcastBox ul {
     display: inline-block;
@@ -69,11 +85,17 @@ html
     padding: 10px;
     width: 15%;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+   flex-wrap: wrap;   
   }
 
 
 footer{
     text-align: center;
     padding: 10px;
-    margin: 10px;
+    margin: 10px; 
+    display: flex;
+    flex-direction: column;
+   flex-wrap: wrap;   
 }
