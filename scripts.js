@@ -42,7 +42,7 @@ function searchFunction() {
     event.preventDefault();
     
     let queriedCity = document.getElementById("searchterm").value;
-    let apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + queriedCity + "&limit=1&appid=947f373954b974834bc6986dec7c1dd0";
+    let apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + queriedCity + "&limit=1&appid=947f373954b974834bc6986dec7c1dd0";
     
     fetch(apiUrl)
       .then(function (response) {
