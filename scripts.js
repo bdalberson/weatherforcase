@@ -41,8 +41,9 @@ function searchFunction() {
     event.preventDefault();
     
     let queriedCity = document.getElementById("searchterm").value;
-    savedCity = queriedCity
-    searchlist.push(savedCity)
+    searchlist.push(queriedCity)
+    localStorage.setItem("searchlist", JSON.stringify(searchlist))
+   
 
     let apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + queriedCity + "&limit=1&appid=947f373954b974834bc6986dec7c1dd0";
     
