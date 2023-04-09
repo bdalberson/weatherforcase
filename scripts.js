@@ -12,7 +12,7 @@ const searchlist = JSON.parse(localStorage.getItem("searchlist")) || []
   const newButton = document.createElement("button");
   savedCity = JSON.parse(localStorage.getItem("searchlist"))
   console.log(savedCity)
-  newButton.textContent = savedCity;
+  newButton.textContent = searchlist[i];
   newButton.addEventListener("click", searchFunction);
   savedButton.appendChild(newButton);
 }
