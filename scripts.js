@@ -11,11 +11,27 @@ const searchlist = JSON.parse(localStorage.getItem("searchlist")) || []
   for (let i in searchlist){  
   const newButton = document.createElement("button");
   savedCity = JSON.parse(localStorage.getItem("searchlist"))
-  console.log(savedCity)
   newButton.textContent = searchlist[i];
-  newButton.addEventListener("click", searchFunction);
   savedButton.appendChild(newButton);
+  newButton.addEventListener("click", function() {
+    searchNewCity(searchlist[i]);
+  });
 }
+
+function searchNewCity(city){
+  let apiUrl =("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=947f373954b974834bc6986dec7c1dd0");
+
+  fetch(apiUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      buildPage(data); // pass the response parameter as an argument to buildPage function
+    })
+    .catch(function (error) {
+      console.log('Error:', error);
+    });
+};
 
 
 // Declare variables to needed query params
@@ -26,28 +42,11 @@ let forcastOneTemp, forcastOneWind, forcastOneHum, forcastOneTime, forcastOneWea
 
 
 searchButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    let queriedCity = document.getElementById("searchterm").value;
-    const newButton = document.createElement("button");
-    newButton.textContent = queriedCity;
-    newButton.addEventListener("click", searchFunction);
-        savedButton.appendChild(newButton);
-
-
-    searchFunction();
-  });
-  
-function searchFunction() {
   event.preventDefault();
-
   let queriedCity = document.getElementById("searchterm").value;
   searchlist.push(queriedCity);
   localStorage.setItem("searchlist", JSON.stringify(searchlist));
-
-  let apiUrl =
-    "https://api.openweathermap.org/geo/1.0/direct?q=" +
-    queriedCity +
-    "&limit=1&appid=947f373954b974834bc6986dec7c1dd0";
+  let apiUrl =("https://api.openweathermap.org/geo/1.0/direct?q=" + queriedCity +"&limit=1&appid=947f373954b974834bc6986dec7c1dd0");
 
   fetch(apiUrl)
     .then(function (response) {
@@ -55,8 +54,11 @@ function searchFunction() {
     })
     .then(function (data) {
       buildPage(data); // pass the response parameter as an argument to buildPage function
+    })
+    .catch(function (error) {
+      console.log('Error:', error);
     });
-}
+});
 
   function buildPage(data) {
     let queriedLat = data[0].lat;
