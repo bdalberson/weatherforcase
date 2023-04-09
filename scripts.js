@@ -1,20 +1,21 @@
 let queriedCity = ""
 
+let savedCity = ""
 
-// const searchList = JSON.parse(localStorage.getItem("searchList")) || [] 
-
-// searchList.push(queriedCity)
-// localStorage.setItem("searchlist", JSON.stringify(searchList))
-// for (let i in searchList){  
-//   queriedCity = document.getElementById("searchterm").value;
-//   const newButton = document.createElement("button");
-//   newButton.textContent = queriedCity;
-//   newButton.addEventListener("click", searchFunction);
-//   savedButton.appendChild(newButton);
+const searchButton = document.getElementById("searchbutton"); 
+const savedButton = document.getElementById("savedbutton");
 
 
-//   searchFunction();
-// }
+const searchlist = JSON.parse(localStorage.getItem("searchlist")) || [] 
+
+  for (let i in searchlist){  
+  const newButton = document.createElement("button");
+  savedCity = JSON.parse(localStorage.getItem("searchlist"))
+  console.log(savedCity)
+  newButton.textContent = savedCity;
+  newButton.addEventListener("click", searchFunction);
+  savedButton.appendChild(newButton);
+}
 
 
 // Declare variables to needed query params
@@ -23,8 +24,6 @@ let forcastOneTemp, forcastOneWind, forcastOneHum, forcastOneTime, forcastOneWea
 
 // First API call to get latitude and longitude for queried city
 
-const searchButton = document.getElementById("searchbutton"); 
-const savedButton = document.getElementById("savedbutton");
 
 searchButton.addEventListener("click", function(event) {
     event.preventDefault();
@@ -42,6 +41,9 @@ function searchFunction() {
     event.preventDefault();
     
     let queriedCity = document.getElementById("searchterm").value;
+    savedCity = queriedCity
+    searchlist.push(savedCity)
+
     let apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + queriedCity + "&limit=1&appid=947f373954b974834bc6986dec7c1dd0";
     
     fetch(apiUrl)
