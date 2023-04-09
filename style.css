@@ -24,23 +24,18 @@ html
     border-style: solid;
     flex:auto;
     display: flex;
-    flex: 1 0 900px; 
     flex-direction: row;
     flex-wrap: wrap;   
 }
 
 
 .searchBox{
-    border-style: solid;
     font-size: x-large;
     width: 45%;
-    float: left;
     height: 60%;
-    flex: auto;
     display: inline-block;
     margin: auto;
-    flex-direction: column;
-    flex-wrap: wrap;   
+    
 }
     
 .input-group{
@@ -98,5 +93,39 @@ footer{
     display: flex;
     flex-direction: column;
    flex-wrap: wrap;   
-   color: rosybrown;
+   color: black;
 }
+
+@media screen and (max-width: 500px) {
+    .searchBox{
+        font-size: large;
+        width: 45%;
+        height: 60%;
+        display: inline-block;
+        margin: auto;
+        
+    }
+    .forcastBox{
+        font-size: x-small;
+        width: 100%;
+        float: right;
+        height: 40%;
+        flex: auto;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+       flex-wrap: wrap;   
+    }
+    .forcastBox ul {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+       flex-wrap: wrap;  
+       color: black; 
+    }
+    footer{
+        display : none; 
+        visibility : hidden; 
+    }
+      
+  }
