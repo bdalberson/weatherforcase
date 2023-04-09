@@ -28,9 +28,6 @@ function searchNewCity(city){
     .then(function (data) {
       buildPage(data); // pass the response parameter as an argument to buildPage function
     })
-    .catch(function (error) {
-      console.log('Error:', error);
-    });
 };
 
 
@@ -45,6 +42,12 @@ searchButton.addEventListener("click", function(event) {
   event.preventDefault();
   let queriedCity = document.getElementById("searchterm").value;
   searchlist.push(queriedCity);
+  const newButton = document.createElement("button");
+  newButton.textContent = queriedCity
+  savedButton.appendChild(newButton);
+  newButton.addEventListener("click", function() {
+    searchNewCity(queriedCity);
+  });
   localStorage.setItem("searchlist", JSON.stringify(searchlist));
   let apiUrl =("https://api.openweathermap.org/geo/1.0/direct?q=" + queriedCity +"&limit=1&appid=947f373954b974834bc6986dec7c1dd0");
 
@@ -55,9 +58,6 @@ searchButton.addEventListener("click", function(event) {
     .then(function (data) {
       buildPage(data); // pass the response parameter as an argument to buildPage function
     })
-    .catch(function (error) {
-      console.log('Error:', error);
-    });
 });
 
   function buildPage(data) {
