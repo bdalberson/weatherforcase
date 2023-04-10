@@ -82,7 +82,7 @@ html
     margin: 10px;
     display: flex;
     flex-direction: column;
-   flex-wrap: wrap;   
+   flex-wrap: wrap; 
   }
 
 
@@ -117,7 +117,6 @@ footer{
        flex-wrap: wrap;   
     }
     .forcastBox ul {
-        width: 15%;
         display: flex;
         flex-direction: column;
        flex-wrap: wrap;  
@@ -127,5 +126,23 @@ footer{
         display : none; 
         visibility : hidden; 
     }
-      
+    @media screen and (max-width: 330px) {
+        .forcastBox{
+            font-size: xx-small;
+            width: 100%;
+            float: right;
+            height: 40%;
+            flex: auto;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+           flex-wrap: wrap;   
+        }
+        .forcastBox ul {
+            display: flex;
+            flex-direction: column;
+           flex-wrap: wrap;  
+           color: black; 
+        }
+    }
   }
