@@ -1,14 +1,14 @@
-let queriedCity = ""
+let queriedCity = ""  //global variable for searched city from searchbar
 
-let savedCity = ""
+let savedCity = "" //global variable for searched city from local storage recent saves
 
-const searchButton = document.getElementById("searchbutton"); 
-const savedButton = document.getElementById("savedbutton");
+const searchButton = document.getElementById("searchbutton"); //search button grabber
+const savedButton = document.getElementById("savedbutton");//recent search button grabber
 
 
-const searchlist = JSON.parse(localStorage.getItem("searchlist")) || [] 
+const searchlist = JSON.parse(localStorage.getItem("searchlist")) || [] //searches for saved cities in local storage or makes an empty array
 
-  for (let i in searchlist){  
+  for (let i in searchlist){   //makes a new button for each item in local storage, clicking it makes the search
   const newButton = document.createElement("button");
   savedCity = JSON.parse(localStorage.getItem("searchlist"))
   newButton.textContent = searchlist[i];
@@ -18,7 +18,7 @@ const searchlist = JSON.parse(localStorage.getItem("searchlist")) || []
   });
 }
 
-function searchNewCity(city){
+function searchNewCity(city){ //searched from the saved to local storage buttons, recently searched
   let apiUrl =("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=947f373954b974834bc6986dec7c1dd0");
 
   fetch(apiUrl)

@@ -14,10 +14,10 @@
         </div>
     </header>
     
-    <main id="main" class = "main">
+    <main id="main" class = "main">   <!-- Main body html -->
         <div class="input-group">
             <input id="searchterm" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            <button id="searchbutton" type="button" class="btn btn-outline-primary">search</button>
+            <button id="searchbutton" type="button" class="btn btn-outline-primary">search</button> <!-- search button -->
             <div>
                 <section class = "searched"> <!-- show recent cities -->
                 <div id ="savedbutton" class ="savebutton"></div>
@@ -25,14 +25,14 @@
             </div>
         </div> 
         
-        <section class = "searchBox"> <!-- used to dynamically serve up citiees -->
+        <section class = "searchBox"> <!-- used to dynamically serve up cities -->
         <div>City</div>
           <ul id="citiesBox"></ul>
         </section>
         <section class = "forcastBox">
         <div>Forcasts</div>  
-          <ul id="forcastBox1"></ul>
-          <ul id="forcastBox2"></ul>
+          <ul id="forcastBox1"></ul>     <!-- used to dynamically serve up forcasts when generated -->
+          <ul id="forcastBox2"></ul>  <!-- done this way so all forcasts can have their own column -->
           <ul id="forcastBox3"></ul>
           <ul id="forcastBox4"></ul>
           <ul id="forcastBox5"></ul>
@@ -41,8 +41,8 @@
     </main>
 
   </body>
-  <footer>By Bdalberson</footer>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <footer>By Bdalberson</footer> <!-- me -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script><!-- day.JS is used to format time human readable -->
     <script>dayjs().format()
     </script>
 <script src="./scripts.js"defer></script>
