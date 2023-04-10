@@ -75,37 +75,37 @@ searchButton.addEventListener("click", function(event) {
         let queriedWind = data.list[0].wind.speed;
         let queriedHum = data.list[0].main.humidity;
         let queriedTime = data.list[0].dt;
-        let queriedWeather = data.list[0].weather[0].main;
+        let queriedWeather = 'https://openweathermap.org/img/wn/' + data.list[0].weather[0].icon + '@2x.png'
   
         let forcastOneTemp = data.list[8].main.temp;
         let forcastOneWind = data.list[8].wind.speed;
         let forcastOneHum = data.list[8].main.humidity;
         let forcastOneTime = data.list[8].dt;
-        let forcastOneWeather = data.list[8].weather[0].main;
+        let forcastOneWeather = 'https://openweathermap.org/img/wn/' + data.list[8].weather[0].icon + '@2x.png'
   
         let forcastTwoTemp = data.list[16].main.temp;
         let forcastTwoWind = data.list[16].wind.speed;
         let forcastTwoHum = data.list[16].main.humidity;
         let forcastTwoTime = data.list[16].dt;
-        let forcastTwoWeather = data.list[16].weather[0].main;
+        let forcastTwoWeather = 'https://openweathermap.org/img/wn/' + data.list[16].weather[0].icon + '@2x.png'
   
         let forcastThreeTemp = data.list[24].main.temp;
         let forcastThreeWind = data.list[24].wind.speed;
         let forcastThreeHum = data.list[24].main.humidity;
         let forcastThreeTime = data.list[24].dt;
-        let forcastThreeWeather = data.list[24].weather[0].main;
+        let forcastThreeWeather = 'https://openweathermap.org/img/wn/' + data.list[24].weather[0].icon + '@2x.png'
   
         let forcastFourTemp = data.list[31].main.temp;
         let forcastFourWind = data.list[31].wind.speed;
         let forcastFourHum = data.list[31].main.humidity;
         let forcastFourTime = data.list[31].dt;
-        let forcastFourWeather = data.list[31].weather[0].main;
+        let forcastFourWeather = 'https://openweathermap.org/img/wn/' + data.list[31].weather[0].icon + '@2x.png'
   
         let forcastFiveTemp = data.list[39].main.temp;
         let forcastFiveWind = data.list[39].wind.speed;
         let forcastFiveHum = data.list[39].main.humidity;
         let forcastFiveTime = data.list[39].dt;
-        let forcastFiveWeather = data.list[39].weather[0].main;
+        let forcastFiveWeather = 'https://openweathermap.org/img/wn/' + data.list[39].weather[0].icon + '@2x.png'
   
         console.log(data);
   
@@ -124,8 +124,8 @@ searchButton.addEventListener("click", function(event) {
         cityBoxSelector.appendChild(cityTime);
   
         // Create a new p element to display the queried weather
-        let cityWeather = document.createElement('li');
-        cityWeather.textContent = queriedWeather;
+        let cityWeather = document.createElement('img');
+        cityWeather.src = queriedWeather;
         cityBoxSelector.appendChild(cityWeather);
 
 
@@ -154,8 +154,8 @@ searchButton.addEventListener("click", function(event) {
     castOneTime.textContent = (dayjs.unix(forcastOneTime).format('MMM D, YYYY'));
     forcastBox1Selector.appendChild(castOneTime);
 
-    let castOneWeather = document.createElement('li');
-      castOneWeather.textContent = (forcastOneWeather);
+    let castOneWeather = document.createElement('img');
+      castOneWeather.src = (forcastOneWeather);
       forcastBox1Selector.appendChild(castOneWeather);
 
       let castOneTemp = document.createElement('li');
@@ -177,8 +177,8 @@ searchButton.addEventListener("click", function(event) {
     castTwoTime.textContent = (dayjs.unix(forcastTwoTime).format('MMM D, YYYY'));
     forcastBox2Selector.appendChild(castTwoTime);
 
-    let castTwoWeather = document.createElement('li');
-    castTwoWeather.textContent = (forcastTwoWeather);
+    let castTwoWeather = document.createElement('img');
+    castTwoWeather.src = (forcastTwoWeather);
     forcastBox2Selector.appendChild(castTwoWeather);
 
     let castTwoTemp = document.createElement('li');
@@ -203,8 +203,8 @@ searchButton.addEventListener("click", function(event) {
     forcastBox3Selector.appendChild(castThreeTime);
 
 
-    let castThreeWeather = document.createElement('li');
-    castThreeWeather.textContent = (forcastThreeWeather);
+    let castThreeWeather = document.createElement('img');
+    castThreeWeather.src = (forcastThreeWeather);
     forcastBox3Selector.appendChild(castThreeWeather);
 
     let castThreeTemp = document.createElement('li');
@@ -228,8 +228,8 @@ searchButton.addEventListener("click", function(event) {
     castFourTime.textContent = (dayjs.unix(forcastFourTime).format('MMM D, YYYY'));
     forcastBox4Selector.appendChild(castFourTime);
 
-    let castFourWeather = document.createElement('li');
-    castFourWeather.textContent = (forcastFourWeather);
+    let castFourWeather = document.createElement('img');
+    castFourWeather.src = (forcastFourWeather);
     forcastBox4Selector.appendChild(castFourWeather);
 
     let castFourTemp = document.createElement('li');
@@ -254,8 +254,8 @@ searchButton.addEventListener("click", function(event) {
 
 
 
-    let castFiveWeather = document.createElement('li');
-    castFiveWeather.textContent = (forcastFiveWeather);
+    let castFiveWeather = document.createElement('img');
+    castFiveWeather.src = (forcastFiveWeather);
     forcastBox5Selector.appendChild(castFiveWeather);
 
     let castFiveTemp = document.createElement('li');

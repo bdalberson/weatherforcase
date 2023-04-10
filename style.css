@@ -24,6 +24,7 @@ html
     border-style: solid;
     flex:auto;
     display: flex;
+    flex: 1 0 900px;
     flex-direction: row;
     flex-wrap: wrap;   
 }
@@ -35,6 +36,10 @@ html
     height: 60%;
     display: inline-block;
     margin: auto;
+    float: left;
+    flex: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
     
 }
     
@@ -126,23 +131,5 @@ footer{
         display : none; 
         visibility : hidden; 
     }
-    @media screen and (max-width: 330px) {
-        .forcastBox{
-            font-size: xx-small;
-            width: 100%;
-            float: right;
-            height: 40%;
-            flex: auto;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-           flex-wrap: wrap;   
-        }
-        .forcastBox ul {
-            display: flex;
-            flex-direction: column;
-           flex-wrap: wrap;  
-           color: black; 
-        }
-    }
+
   }
