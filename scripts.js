@@ -69,7 +69,7 @@ searchButton.addEventListener("click", function(event) { //clicks the search but
       .then(function (response) {
         return response.json();
       })
-      .then(function (data) {
+      .then(function (data) { //sets up all the variables from the api calls and stores them
         let queriedCity = data.city.name;
         let queriedTemp = data.list[0].main.temp;
         let queriedWind = data.list[0].wind.speed;
@@ -107,7 +107,6 @@ searchButton.addEventListener("click", function(event) { //clicks the search but
         let forcastFiveTime = data.list[39].dt;
         let forcastFiveWeather = 'https://openweathermap.org/img/wn/' + data.list[39].weather[0].icon + '@2x.png'
   
-        console.log(data);
   
         let cityBoxSelector = document.getElementById('citiesBox');
         let clearElement = document.getElementById('citiesBox');
@@ -145,7 +144,7 @@ searchButton.addEventListener("click", function(event) { //clicks the search but
     cityBoxSelector.appendChild(cityHum);
 
 
-//////////////////////////
+////////////////////////// builds the page below //////////////////////////////
 
     let forcastBox1Selector = document.getElementById('forcastBox1');
     clearElement = document.getElementById('forcastBox1')
