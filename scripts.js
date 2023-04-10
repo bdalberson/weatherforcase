@@ -38,7 +38,7 @@ let forcastOneTemp, forcastOneWind, forcastOneHum, forcastOneTime, forcastOneWea
 // First API call to get latitude and longitude for queried city
 
 
-searchButton.addEventListener("click", function(event) {
+searchButton.addEventListener("click", function(event) { //clicks the search button, makes the saved search buttons
   event.preventDefault();
   let queriedCity = document.getElementById("searchterm").value;
   searchlist.push(queriedCity);
